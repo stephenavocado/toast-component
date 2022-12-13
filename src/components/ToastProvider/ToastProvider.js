@@ -26,6 +26,10 @@ function ToastProvider({ children }) {
     setToasts(newToasts);
   }
 
+  function deleteToasts() {
+    setToasts([]);
+  }
+
   return (
     <ToastContext.Provider
       value={{
@@ -37,6 +41,7 @@ function ToastProvider({ children }) {
         setToasts,
         createToast,
         clearToast,
+        deleteToasts,
       }}
     >
       {children}
